@@ -5,8 +5,8 @@ import { userFactory } from '../../../../../src/core/db/factory/user.factory';
 import HttpError from '../../../../../src/core/error';
 import authConfig from '../../../../../src/features/auth/lib/auth-config';
 import User from '../../../../../src/features/user/user';
-import UserTokenService from '../../../../../src/features/user/usertoken/lib/user-token.servicee';
-import UserToken from '../../../../../src/features/user/usertoken/user-tokenn';
+import UserTokenService from '../../../../../src/features/user/usertoken/lib/user-token.service';
+import UserToken from '../../../../../src/features/user/usertoken/user-token';
 import { assertError } from '../../../../testUtils';
 
 const sandbox = sinon.createSandbox();
