@@ -14,6 +14,12 @@ interface IConfig {
     REFRESH_SECRET: string;
     REFRESH_EXPIRE_DAYS: number;
   };
+  adminAuth: {
+    JWT_SECRET: string;
+    JWT_EXPIRE_MINUTES: number;
+    REFRESH_SECRET: string;
+    REFRESH_EXPIRE_DAYS: number;
+  };
 }
 
 const NODE_ENV: string = process.env.NODE_ENV || 'development';
@@ -30,6 +36,14 @@ const development: IConfig = {
     REFRESH_SECRET: process.env.REFRESH_SECRET || '@QEGTUI',
     REFRESH_EXPIRE_DAYS: parseInt(process.env.REFRESH_EXPIRE_DAYS, 10) || 20,
   },
+  adminAuth: {
+    JWT_SECRET: process.env.ADMIN_JWT_SECRET || '@QEGTUI',
+    JWT_EXPIRE_MINUTES:
+      parseInt(process.env.ADMIN_JWT_EXPIRE_MINUTES, 10) || 10,
+    REFRESH_SECRET: process.env.ADMIN_REFRESH_SECRET || '@QEGTUI',
+    REFRESH_EXPIRE_DAYS:
+      parseInt(process.env.ADMIN_REFRESH_EXPIRE_DAYS, 10) || 20,
+  },
 };
 
 const production: IConfig = {
@@ -44,6 +58,14 @@ const production: IConfig = {
     REFRESH_SECRET: process.env.REFRESH_SECRET || '@QEGTUI',
     REFRESH_EXPIRE_DAYS: parseInt(process.env.REFRESH_EXPIRE_DAYS, 10) || 20,
   },
+  adminAuth: {
+    JWT_SECRET: process.env.ADMIN_JWT_SECRET || '@QEGTUI',
+    JWT_EXPIRE_MINUTES:
+      parseInt(process.env.ADMIN_JWT_EXPIRE_MINUTES, 10) || 10,
+    REFRESH_SECRET: process.env.ADMIN_REFRESH_SECRET || '@QEGTUI',
+    REFRESH_EXPIRE_DAYS:
+      parseInt(process.env.ADMIN_REFRESH_EXPIRE_DAYS, 10) || 20,
+  },
 };
 
 const test: IConfig = {
@@ -57,6 +79,14 @@ const test: IConfig = {
     JWT_EXPIRE_MINUTES: parseInt(process.env.JWT_EXPIRE_MINUTES, 10) || 10,
     REFRESH_SECRET: process.env.REFRESH_SECRET || '@QEGTUI',
     REFRESH_EXPIRE_DAYS: parseInt(process.env.REFRESH_EXPIRE_DAYS, 10) || 20,
+  },
+  adminAuth: {
+    JWT_SECRET: process.env.ADMIN_JWT_SECRET || '@QEGTUI',
+    JWT_EXPIRE_MINUTES:
+      parseInt(process.env.ADMIN_JWT_EXPIRE_MINUTES, 10) || 10,
+    REFRESH_SECRET: process.env.ADMIN_REFRESH_SECRET || '@QEGTUI',
+    REFRESH_EXPIRE_DAYS:
+      parseInt(process.env.ADMIN_REFRESH_EXPIRE_DAYS, 10) || 20,
   },
 };
 

@@ -1,6 +1,6 @@
 import Findable from '../../../core/contracts/findable';
-import UserService from '../../user/lib/user.service';
-import UserTokenService from '../../user/usertoken/lib/user-token.service';
+import UserService from '../../user/_lib/user.service';
+import UserTokenService from '../../user/usertoken/_lib/user-token.service';
 import Tokenable from '../contracts/tokenable';
 import { UserTypes } from './auth-type';
 
