@@ -1,1 +1,1 @@
-## Foody food delivery app
+## Eventum event / ticketing management platform
