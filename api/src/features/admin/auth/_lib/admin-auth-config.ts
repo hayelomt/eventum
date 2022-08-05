@@ -1,4 +1,4 @@
-import env from '../../../core/env';
+import env from '../../../../core/env';
 
 const adminAuthConfig = {
   saltRounds: 12,

@@ -1,6 +1,6 @@
 import * as jwt from 'jsonwebtoken';
 import HttpError from '../../../../core/error';
-import adminAuthConfig from '../../_lib/admin-auth-config';
+import adminAuthConfig from '../../auth/_lib/admin-auth-config';
 import AdminToken from '../admin-token';
 
 const AdminTokenService = {
