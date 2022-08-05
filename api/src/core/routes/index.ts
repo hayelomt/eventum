@@ -3,6 +3,7 @@ import * as http from 'http';
 import * as path from 'path';
 import * as swaggerJSDoc from 'swagger-jsdoc';
 import * as swaggerUi from 'swagger-ui-express';
+import adminAuthRouter from '../../features/admin/auth/admin-auth.route';
 import authRouter from '../../features/auth/auth.route';
 import handleError from '../error/handle-error';
 
@@ -20,6 +21,8 @@ export function init(app: express.Application): void {
    * @constructs
    */
   app.use('/v1/auth', authRouter);
+
+  app.use('/admin/auth', adminAuthRouter);
 
   /**
    * @description

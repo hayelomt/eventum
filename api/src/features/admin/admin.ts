@@ -3,7 +3,7 @@ import { NextFunction } from 'express';
 import { Document, Schema } from 'mongoose';
 import { db } from '../../core/db/connection';
 import appConstants from '../../core/utils/app-constants';
-import authConfig from '../auth/lib/auth-config';
+import authConfig from '../auth/_lib/auth-config';
 
 export interface IAdmin extends Document {
   email: string;
