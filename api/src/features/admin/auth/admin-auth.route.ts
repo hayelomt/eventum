@@ -12,6 +12,8 @@ adminAuthRouter.post(
   AdminAuthController.login,
 );
 
+adminAuthRouter.post('/refresh/:refreshToken', AdminAuthController.refresh);
+
 adminAuthRouter.get('/test', isAdmin, AdminAuthController.test);
 
 export default adminAuthRouter;

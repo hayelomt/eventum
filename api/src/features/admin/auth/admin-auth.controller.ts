@@ -21,6 +21,24 @@ const AdminAuthController = {
     });
   }),
 
+  refresh: catchAsync(async (req, res) => {
+    const { refreshToken: refreshTokenRequest } = req.params;
+
+    const adminId = await AdminTokenService.verifyRefreshToken(
+      refreshTokenRequest,
+    );
+
+    const { accessToken, refreshToken } =
+      await AdminTokenService.generateAuthTokens(adminId);
+
+    res.json({
+      data: {
+        accessToken,
+        refreshToken,
+      },
+    });
+  }),
+
   test: catchAsync(async (req: RequestWithAdmin, res: Response) => {
     res.json({ a: req.admin.email });
   }),
