@@ -10,14 +10,6 @@ type SignUpUserDto = {
   };
 };
 
-export type SignUpManagerDto = {
-  email: string;
-  password: string;
-  profile: {
-    name: string;
-  };
-};
-
 type LoginDto = {
   email: string;
   password: string;
@@ -31,14 +23,6 @@ const AuthDto = {
       name: data.name,
       gender: data.gender,
       location: data.location,
-    },
-  }),
-
-  signUpManagerDto: (data: any): SignUpManagerDto => ({
-    email: data.email,
-    password: data.password,
-    profile: {
-      name: data.name,
     },
   }),
 
