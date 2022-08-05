@@ -4,6 +4,7 @@ const appConstants = {
     adminToken: 'adminToken',
     user: 'user',
     userToken: 'usertoken',
+    venue: 'venue',
   },
 };
 
