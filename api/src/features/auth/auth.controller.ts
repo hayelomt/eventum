@@ -42,8 +42,10 @@ const AuthController = {
         await tokenableService.generateAuthTokens(userId);
 
       res.json({
-        accessToken,
-        refreshToken,
+        data: {
+          accessToken,
+          refreshToken,
+        },
       });
     }),
 
