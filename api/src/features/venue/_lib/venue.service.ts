@@ -2,8 +2,8 @@ import Venue from '../venue';
 import VenueDto from './venue.dto';
 
 const VenueService = {
-  findOne: (id: string) => {
-    return Venue.findById(id);
+  findOne: async (id: string) => {
+    return Venue.findById(id).exec();
   },
 
   findName: (name: string, id?: string) => {

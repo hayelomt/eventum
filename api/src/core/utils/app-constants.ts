@@ -1,7 +1,8 @@
 const appConstants = {
   models: {
     admin: 'admin',
-    adminToken: 'adminToken',
+    adminToken: 'admintoken',
+    event: 'event',
     user: 'user',
     userToken: 'usertoken',
     venue: 'venue',

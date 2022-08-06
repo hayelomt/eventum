@@ -111,6 +111,12 @@ class ValidationRules {
     return this;
   }
 
+  time() {
+    // TODO: implement time
+    // throw new Error('not implemented');
+    return this;
+  }
+
   array() {
     this.chain.isArray().withMessage(`${this.field} must be a list`);
     return this;

@@ -5,6 +5,7 @@ import * as swaggerJSDoc from 'swagger-jsdoc';
 import * as swaggerUi from 'swagger-ui-express';
 import adminAuthRouter from '../../features/admin/auth/admin-auth.route';
 import authRouter from '../../features/auth/auth.route';
+import eventsRouter from '../../features/events/events.route';
 import venueRouter from '../../features/venue/venue.route';
 import handleError from '../error/handle-error';
 
@@ -22,6 +23,8 @@ export function init(app: express.Application): void {
    * @constructs
    */
   app.use('/v1/auth', authRouter);
+
+  app.use('/v1/events', eventsRouter);
 
   app.use('/v1/venues', venueRouter);
 

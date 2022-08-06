@@ -29,6 +29,6 @@ const VenueSchema = new Schema({
   images: [String],
 });
 
-const Venue = db.model(appConstants.models.venue, VenueSchema);
+const Venue = db.model<IVenue>(appConstants.models.venue, VenueSchema);
 
 export default Venue;
